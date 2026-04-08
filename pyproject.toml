@@ -1,0 +1,26 @@
+[project]
+name = "hotline-agent-12345"
+version = "0.1.0"
+description = "12345 政务热线智能客服系统 - 基于 DeepAgents 框架"
+requires-python = ">=3.11"
+dependencies = [
+    "deepagents>=0.3.5",
+    "langchain>=1.2.3",
+    "langchain-community>=0.3.0",
+    "langgraph>=1.0.6",
+    "httpx>=0.27.0",
+    "python-dotenv>=1.0.0",
+    "rich>=13.0.0",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.34.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,73 @@
+{
+  "WATER_OUTAGE": {
+    "display_name": "停水投诉",
+    "required_elements": [
+      {"key": "address", "label": "详细地址", "question": "请问您的详细地址是（精确到楼栋）？", "validation": "非空"},
+      {"key": "start_time", "label": "停水开始时间", "question": "请问大概是从什么时间开始停水的？", "validation": "时间格式"},
+      {"key": "reason", "label": "停水原因", "question": "请问您了解停水的原因吗（如管道维修、欠费、不明原因等）？", "validation": "非空"}
+    ],
+    "optional_elements": [
+      {"key": "contact_phone", "label": "联系电话", "question": "方便留一个联系电话，以便后续跟进吗？"},
+      {"key": "affected_scope", "label": "影响范围", "question": "请问停水影响的范围大概有多大（如整栋楼、整个小区）？"}
+    ]
+  },
+  "POWER_OUTAGE": {
+    "display_name": "停电投诉",
+    "required_elements": [
+      {"key": "address", "label": "详细地址", "question": "请问您的详细地址是？", "validation": "非空"},
+      {"key": "start_time", "label": "停电开始时间", "question": "请问大概是从什么时间开始停电的？", "validation": "时间格式"},
+      {"key": "is_whole_building", "label": "是否整栋楼停电", "question": "请问是整栋楼都停电还是只有您家？", "validation": "布尔"}
+    ],
+    "optional_elements": [
+      {"key": "contact_phone", "label": "联系电话", "question": "方便留一个联系电话吗？"},
+      {"key": "equipment_damage", "label": "设备损坏情况", "question": "停电期间有没有造成电器损坏？"}
+    ]
+  },
+  "NOISE_COMPLAINT": {
+    "display_name": "噪音扰民投诉",
+    "required_elements": [
+      {"key": "noise_location", "label": "噪音来源位置", "question": "请问噪音是从哪里发出来的？", "validation": "非空"},
+      {"key": "time_period", "label": "发生时间段", "question": "请问噪音主要在什么时间段发生？", "validation": "非空"},
+      {"key": "noise_type", "label": "噪音类型", "question": "请问噪音属于哪种类型（施工、娱乐、生活等）？", "validation": "枚举:施工,娱乐,生活,其他"}
+    ],
+    "optional_elements": [
+      {"key": "frequency", "label": "频次", "question": "这种噪音大概多久出现一次？"},
+      {"key": "self_negotiation", "label": "已协商记录", "question": "请问您是否已经尝试自行与对方协商？"}
+    ]
+  },
+  "ROAD_DAMAGE": {
+    "display_name": "道路损坏投诉",
+    "required_elements": [
+      {"key": "road_location", "label": "具体路段或路口", "question": "请问具体是哪条路或哪个路口？", "validation": "非空"},
+      {"key": "damage_type", "label": "损坏类型", "question": "请问损坏类型是什么（坑洞、护栏损坏、标线不清等）？", "validation": "枚举:坑洞,护栏损坏,标线不清,其他"},
+      {"key": "affects_traffic", "label": "是否影响通行", "question": "请问目前是否影响正常通行？", "validation": "布尔"}
+    ],
+    "optional_elements": [
+      {"key": "photo_description", "label": "照片描述", "question": "如果方便的话，能描述一下现场情况吗？"},
+      {"key": "discovery_time", "label": "发现时间", "question": "请问您是什么时候发现这个问题的？"}
+    ]
+  },
+  "GAS_ISSUE": {
+    "display_name": "燃气问题投诉",
+    "required_elements": [
+      {"key": "address", "label": "详细地址", "question": "请问您的详细地址是？", "validation": "非空"},
+      {"key": "issue_type", "label": "问题类型", "question": "请问具体是什么燃气问题（停气、泄漏、设备故障等）？", "validation": "枚举:停气,泄漏,设备故障,其他"},
+      {"key": "start_time", "label": "问题开始时间", "question": "请问问题大概是从什么时候开始的？", "validation": "时间格式"}
+    ],
+    "optional_elements": [
+      {"key": "contact_phone", "label": "联系电话", "question": "方便留一个联系电话吗？"},
+      {"key": "safety_concern", "label": "安全隐患", "question": "目前是否有安全隐患需要紧急处理？"}
+    ]
+  },
+  "OTHER": {
+    "display_name": "其他投诉",
+    "required_elements": [
+      {"key": "description", "label": "问题描述", "question": "请您详细描述一下遇到的问题。", "validation": "非空"},
+      {"key": "address", "label": "相关地址", "question": "请问问题发生的具体地点在哪里？", "validation": "非空"},
+      {"key": "start_time", "label": "发生时间", "question": "请问问题是什么时候发生的？", "validation": "时间格式"}
+    ],
+    "optional_elements": [
+      {"key": "contact_phone", "label": "联系电话", "question": "方便留一个联系电话吗？"}
+    ]
+  }
+}
